@@ -1,0 +1,47 @@
+const mongoose=require("mongoose");
+
+const postSchema=new mongoose.Schema({
+    ID:{
+       type:Number,
+       default:101
+    },
+    date:{
+        type:String,
+        required:true
+    },
+    time:{
+        type:String,
+        required:true,
+        trim:true
+    },
+    subject:{
+        type:String,
+        required:true,
+        trim:true
+    },
+    type:{
+        type:String,
+        required:true,
+        trim:true
+    },
+    description:{
+        type:String,
+        required:true,
+        trim:true
+    },
+    weblink:{
+        type:String,
+        required:true
+    },
+    picture:{
+        type:String,
+        required:true
+    },
+    teacher:{
+        type:String,
+        required:true
+    }
+},{
+    timestamps:true
+});
+module.exports=mongoose.model('post',postSchema);
